@@ -1,0 +1,65 @@
+
+.breadcrumb {
+  list-style: none;
+  overflow: hidden;
+  font: 18px Helvetica, Arial, Sans-Serif;
+}
+.breadcrumb li {
+  float: left;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0 10px 65px;
+  background: brown;                   /* fallback color */
+  background: hsla(34,85%,35%,1);
+  position: relative;
+  display: block;
+  float: left;
+}
+.breadcrumb > li + li:before {
+  content: "/";
+  padding: 0 5px;
+  color: #999999;
+}
+
+.breadcrumb li a:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid hsla(34,85%,35%,1);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+.breadcrumb li a:before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+.breadcrumb li:first-child a {
+  padding-left: 10px;
+}
+/*test*/
+.breadcrumb li a.active { background: hsla(34,85%,25%,1); }
+.breadcrumb li a.active:after { border-left-color: hsla(34,85%,25%,1) !important; }
+.breadcrumb li a:hover { background: hsla(34,85%,25%,1); }
+.breadcrumb li a:hover:after { border-left-color: hsla(34,85%,25%,1) !important; }
