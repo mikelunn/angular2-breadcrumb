@@ -1,8 +1,8 @@
 <div>
   <ul class="breadcrumb">
     <li *ngFor="let route of routes; let last = last" > <!-- disable link of last item -->
-      <a role="button" *ngIf="!last" (click)="goTo(route.url)" [ngClass]="{'active': last}">{{route.label}}</a>
-      <span *ngIf="last">{{route.label}}</span>
+      <a role="button"  (click)="goTo(route.url)" [ngClass]="{'active': last}">{{route.label}}</a>
+
     </li>
   </ul>
 </div>
