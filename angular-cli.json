@@ -19,8 +19,7 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/bootstrap/dist/css/navbar-fixed-top.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [],
       "environments": {
